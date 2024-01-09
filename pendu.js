@@ -82,7 +82,8 @@ btnRestart.className = `btn btn-success py-1 px-3 my-1 invisible`;
 const tableauEl = document.getElementById('tableau');
 
 lettresUtil.appendChild(lettersUtulise(100, lettresUtil).el);
-
+// const alphaUt = lettersUtulise(100, lettresUtil);
+// console.log(alphaUt);
 // logique de la Jeu
 
 let mot_trouve = new Map();
