@@ -81,7 +81,7 @@ const btnRestart = document.getElementById('btn-restart');
 btnRestart.className = `btn btn-success py-1 px-3 my-1 invisible`;
 const tableauEl = document.getElementById('tableau');
 
-lettresUtil.appendChild(lettersUtulise(0, lettresUtil).el);
+lettresUtil.appendChild(lettersUtulise(100, lettresUtil).el);
 
 // logique de la Jeu
 
@@ -184,6 +184,7 @@ function relaunchGame() {
   mot_trouve.clear();
   erreurs_commises = 0;
   btnRestart.className = `btn btn-success py-1 px-3 my-1 invisible`;
+  lettresUtil.appendChild(lettersUtulise(100, lettresUtil).el);
 }
 
 btnRestart.onclick = () => {
@@ -208,7 +209,6 @@ btnSubmit.onclick = () => {
     return;
   }
   lettresUtil.appendChild(lettersUtulise(lettre, lettresUtil).el);
-  // keyboard = lettersUtulise(lettre, lettresUtil).frenchAlphabet;
 
   if (tableau.includes(lettre)) {
     infoPannel('deja');

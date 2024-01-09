@@ -1,4 +1,33 @@
 'use strict';
+
+const alpha = [
+  'A',
+  'B',
+  'C',
+  'D',
+  'E',
+  'F',
+  'G',
+  'H',
+  'I',
+  'J',
+  'K',
+  'L',
+  'M',
+  'N',
+  'O',
+  'P',
+  'Q',
+  'R',
+  'S',
+  'T',
+  'U',
+  'V',
+  'W',
+  'X',
+  'Y',
+  'Z',
+];
 let frenchAlphabet = [
   'A',
   'B',
@@ -33,7 +62,7 @@ export const lettersUtulise = (lettre, lettresUtil) => {
   const el = document.createElement('div');
   el.className = 'row';
   frenchAlphabet = frenchAlphabet.filter((l) => l !== lettre);
-
+  if (lettre === 100) frenchAlphabet = alpha;
   for (const l of frenchAlphabet) {
     const span = document.createElement('span');
     span.className =
@@ -46,5 +75,6 @@ export const lettersUtulise = (lettre, lettresUtil) => {
     frenchAlphabet,
     el,
   };
+  // console.log(resp.frenchAlphabet);
   return resp;
 };
